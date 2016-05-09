@@ -9,10 +9,14 @@ import com.baidu.mapapi.SDKInitializer;
  */
 
 public class BDMapApplication extends Application {
-
+    public LocationService locationService;
     @Override
     public void onCreate() {
         super.onCreate();
+
+
+        locationService = new LocationService(getApplicationContext());
+
         SDKInitializer.initialize(getApplicationContext());
     }
 }
